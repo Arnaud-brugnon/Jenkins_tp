@@ -29,7 +29,7 @@
 			<fileset dir="${project.basedir}/www">
 			  <include name="**/*.php"/>
 			</fileset>
-		<formatter type="xml" outfile="${project.basedir}/reports/phpcpd/pmd-cpd.xml"/>
+		<formatter type="pmd" outfile="${project.basedir}/reports/phpcpd/pmd-cpd.xml"/>
 		</phpcpd>
 	</target>
 </project>
