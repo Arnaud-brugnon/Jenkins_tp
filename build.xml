@@ -17,7 +17,6 @@
 	<target name="phpcs">
 		<mkdir dir="${project.basedir}/reports/phpcs" />
 		<phpcodesniffer standard="PHP" format="summary">
-			<formatter todir="${project.basedir}/reports/phpcs" type="xml"/>
 			<fileset dir="${project.basedir}/www">
 			  <include name="**/*.php"/>
 			</fileset>
