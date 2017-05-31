@@ -1,6 +1,5 @@
 <?php
-require_once '../www/calc.php'; // Il s'agit du fichier de notre classe "calc"
-require_once 'C:\xampp\htdocs\composer\vendor\autoload.php';
+require_once realpath(__DIR__.'/../www/calc.php'); // Il s'agit du fichier de notre classe "calc"
 use PHPUnit\Framework\TestCase;
  
 class calcTest extends TestCase {
