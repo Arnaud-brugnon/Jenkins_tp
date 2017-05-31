@@ -31,5 +31,15 @@
 			</fileset>
 		<formatter type="pmd" outfile="${project.basedir}/reports/phpcpd/pmd-cpd.xml"/>
 		</phpcpd>
+	</target>	
+	<target name="phpdepend">
+		<mkdir dir="${project.basedir}/reports/phpdepend" />
+		<phpdepend>
+			<fileset dir="${project.basedir}/www">
+			  <include name="**/*.php"/>
+			</fileset>
+		<logger type="jdepend-xml" outfile="${project.basedir}/reports/phpdepend/jdepend.xml"/>
+		<analyzer type="coderank-mode" value="method"/>
+		</phpdepend>
 	</target>
 </project>
