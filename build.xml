@@ -16,7 +16,7 @@
 	</target>
 	<target name="phpcs">
 		<mkdir dir="${project.basedir}/reports/phpcs" />
-		<phpcodesniffer standard="PHP" format="summary">
+		<phpcodesniffer standard="Zend" format="summary">
 			<fileset dir="${project.basedir}/www">
 			  <include name="**/*.php"/>
 			</fileset>
