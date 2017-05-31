@@ -14,4 +14,14 @@
 			</batchtest>
 		</phpunit>
 	</target>
+	<target name="phpcs">
+		<mkdir dir="${project.basedir}/reports/phpcs" />
+		<phpcodesniffer standard="PHP" format="summary">
+			<formatter todir="${project.basedir}/reports/phpcs" type="xml"/>
+			<fileset dir="${project.basedir}/www">
+			  <include name="**/*.php"/>
+			</fileset>
+		<formatter type="checkstyle" outfile="${project.basedir}/reports/phpcs/checkstyle.xml"/>
+		</phpcodesniffer>
+	</target>
 </project>
