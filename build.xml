@@ -23,4 +23,13 @@
 		<formatter type="checkstyle" outfile="${project.basedir}/reports/phpcs/checkstyle.xml"/>
 		</phpcodesniffer>
 	</target>
+	<target name="phpcpd">
+		<mkdir dir="${project.basedir}/reports/phpcpd" />
+		<phpcpd>
+			<fileset dir="${project.basedir}/www">
+			  <include name="**/*.php"/>
+			</fileset>
+		<formatter type="pmd" outfile="${project.basedir}/reports/phpcpd/pmd-cpd.xml"/>
+		</phpcpd>
+	</target>
 </project>
